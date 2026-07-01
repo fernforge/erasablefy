@@ -1,0 +1,19 @@
+name: erasablefy
+description: Fail CI when TypeScript enum, value-namespace, or parameter-property syntax would crash under Node type stripping.
+branding:
+  icon: scissors
+  color: purple
+inputs:
+  globs:
+    description: Glob(s) of files to check (space-separated).
+    required: false
+    default: "src/**/*.ts"
+  version:
+    description: npm version/tag of erasablefy to run.
+    required: false
+    default: "latest"
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: npx --yes erasablefy@${{ inputs.version }} --check ${{ inputs.globs }}

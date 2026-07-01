@@ -1,0 +1,7 @@
+src/
+test/
+tsconfig.json
+.github/
+*.log
+PROGRESS.md
+.cb-claude.log

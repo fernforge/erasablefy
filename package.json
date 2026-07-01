@@ -1,0 +1,53 @@
+{
+  "name": "erasablefy",
+  "version": "0.1.0",
+  "description": "Codemod that rewrites TypeScript enum, value-namespace, and constructor parameter-properties into erasable syntax so your .ts files run directly on Node's type stripping (no build step, no ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX).",
+  "keywords": [
+    "typescript",
+    "codemod",
+    "erasableSyntaxOnly",
+    "type-stripping",
+    "strip-types",
+    "node",
+    "enum",
+    "namespace",
+    "parameter-properties",
+    "ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX",
+    "migration",
+    "ts-morph"
+  ],
+  "type": "module",
+  "bin": {
+    "erasablefy": "dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ts-morph": "^24.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/node": "^22.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernforge/erasablefy.git"
+  },
+  "homepage": "https://github.com/fernforge/erasablefy",
+  "bugs": "https://github.com/fernforge/erasablefy/issues"
+}
