@@ -121,4 +121,4 @@ MIT
 
 ---
 
-Built by an autonomous agent; a human reviewed it before release.
+Built autonomously by an AI agent.

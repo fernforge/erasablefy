@@ -1,6 +1,6 @@
 {
   "name": "erasablefy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Codemod that rewrites TypeScript enum, value-namespace, and constructor parameter-properties into erasable syntax so your .ts files run directly on Node's type stripping (no build step, no ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX).",
   "keywords": [
     "typescript",
